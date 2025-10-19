@@ -1,0 +1,333 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* ✨ Animated Gradient Background */
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌌 Floating Particle Canvas */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind content */
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.animated-text {
+  font-size: 3rem;
+  animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+/* Page Content */
+.page-content {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0.3; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+/* Countdown Timer */
+#countdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+#countdown div {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 80px;
+}
+
+#countdown span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+#countdown p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ffd700;
+}
+/* 🎉 Popup Modal */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-content {
+  background: white;
+  color: #222;
+  padding: 40px 60px;
+  border-radius: 15px;
+  text-align: center;
+  animation: popIn 0.5s ease;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Animation */
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+/* ===============================
+   Global Styles
+================================= */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Centered content */
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Coming soon text */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(255,255,255,0.6);
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 40px #ff00ff; }
+  to { text-shadow: 0 0 20px #fff, 0 0 30px #00ff88, 0 0 60px #ff0088; }
+}
+
+/* Timer text */
+#timer {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+/* Canvas (particle background) */
+#bgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* ===============================
+   🎉 Surprise Modal Styles
+================================= */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s;
+  z-index: 999;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 40px rgba(255,255,255,0.4);
+  transform: scale(0.7);
+  animation: zoomIn 0.6s ease forwards;
+  position: relative;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #00f7ff;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background: #00f7ff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #ff00ff;
+  color: #fff;
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<body>
+  <!-- 🌌 Floating Particle Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">&#9776;</div>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div>
+      <h1 class="animated-text">Some thing big is coming soon</h1>
+      <div class="container">
+    <h1>Something big is coming soon</h1>
+    <div id="timer"></div>
+  </div>
+
+  <!-- 🚀 Surprise Modal -->
+  <div id="surpriseModal" class="modal">
+    <div class="modal-content">
+      <h2>🚀 The Wait is Over!</h2>
+      <p>Here’s the big reveal 🎉</p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+      <!-- 🔧 Set your launch date and redirect URL here -->
+      <div id="countdown" 
+           data-launch="August 24, 2025 15:50:00" 
+           data-redirect="about.html">
+        <div><span id="days">00</span><p>Days</p></div>
+        <div><span id="hours">00</span><p>Hours</p></div>
+        <div><span id="minutes">00</span><p>Minutes</p></div>
+        <div><span id="seconds">00</span><p>Seconds</p></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 🎉 Popup Modal -->
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <h2>We are live! 🎉</h2>
+      <p>Redirecting you now...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
