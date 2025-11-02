@@ -1,0 +1,30 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { color: #222; background: #f8f8f8; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 15px 10%; background: #000; color: #fff; }
+header .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; }
+nav a { color: #fff; margin-left: 20px; text-decoration: none; }
+nav a.active, nav a:hover { border-bottom: 2px solid #fff; }
+
+.hero { text-align: center; padding: 100px 10%; background: url('https://via.placeholder.com/1200x500') center/cover no-repeat; color: #fff; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 20px; }
+.btn { display: inline-block; background: #fff; color: #000; padding: 10px 25px; border-radius: 4px; text-decoration: none; font-weight: 600; }
+
+.features { display: flex; justify-content: space-around; padding: 60px 10%; background: #fff; }
+.feature { max-width: 300px; text-align: center; }
+.feature h2 { margin-bottom: 10px; color: #000; }
+
+.products { text-align: center; padding: 60px 10%; }
+.product-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+.product { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 250px; }
+.product img { width: 100%; border-radius: 8px; }
+.product h3 { margin-top: 10px; font-size: 1.1rem; }
+.product p { color: #555; }
+
+.contact { text-align: center; padding: 60px 10%; }
+form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: auto; }
+input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 100%; }
+button.btn { background: #000; color: #fff; cursor: pointer; border: none; }
+
+footer { text-align: center; padding: 20px; background: #000; color: #fff; margin-top: 50px; }
